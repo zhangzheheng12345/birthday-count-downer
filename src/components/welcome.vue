@@ -5,9 +5,9 @@
 <button @click="SetVisited">Done</button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import dateInputer from './dateInputer.vue'
-import { GetSettings, SetSettings, SetVisited } from "/src/storage.js"
+import { GetSettings, SetSettings, SetVisited } from "../storage.js"
 import { reactive, watchEffect, onMounted } from "vue"
 
 let date = reactive({
@@ -25,3 +25,10 @@ watchEffect(() => {
     SetSettings("day", date.day)
 })
 </script>
+
+<style scoped>
+input {
+    margin: 5px;
+    padding: 5px;
+}
+</style>

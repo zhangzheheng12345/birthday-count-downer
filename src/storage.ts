@@ -5,13 +5,17 @@ export function SetVisited() {
     localStorage.setItem("have-visited", "true")
 }
 
-export function GetSettings() {
-    return JSON.parse(localStorage.getItem("settings")) || {
+export interface Date {
+    month: string,
+    day: string
+}
+export function GetSettings(): Date {
+    return JSON.parse(localStorage.getItem("settings") || "") || {
         month: "", day: ""
     }
 }
-export function SetSettings(key, value) {
-    let storage = GetSettings()
+export function SetSettings(key: string, value: string) {
+    let storage = GetSettings() as Date
     storage[key] = value
     localStorage.setItem("settings", JSON.stringify(storage))
     console.log(GetSettings())
