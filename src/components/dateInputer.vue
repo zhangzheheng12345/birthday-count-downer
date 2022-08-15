@@ -1,25 +1,33 @@
 <template>
     <div>
         <span>Month: </span>
-        <input v-model="month"/>
+        <input v-model="month" />
         <span>Day:</span>
-        <input v-model="day"/>
+        <input v-model="day" />
     </div>
 </template>
 
-<script>
-export default {
-    props: ["inMonth", "inDay"],
-    emits: ["update:inMonth", "update:inDay"],
-    computed: {
-        month: {
-            get() { return this.inMonth },
-            set(value) { this.$emit("update:inMonth", value) }
-        },
-        day: {
-            get() { return this.inDay },
-            set(value) { this.$emit("update:inDay", value) }
-        }
-    }
-}
+<script setup lang="ts">
+import { computed } from 'vue';
+
+const { inMonth, inDay } = defineProps<{
+    inMonth: string
+    inDay: string
+}>()
+
+const emits = defineEmits<{
+    (e: 'update:inMonth', value: string): void
+    (e: 'update:inDay', value: string): void
+}>()
+
+let month = computed({
+    get() { return inMonth },
+    set(value) { emits("update:inMonth", value) }
+})
+let day = computed({
+    get() { return inDay },
+    set(value) { emits("update:inDay", value) }
+
+})
+
 </script>

@@ -19,4 +19,9 @@ h1 {
     font-family: 'Mahone Sans', sans-serif;
     font-size: 50px;
 }
+
+input {
+    margin: 5px;
+    padding: 5px;
+}
 </style>
