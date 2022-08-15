@@ -23,5 +23,8 @@ h1 {
 input {
     margin: 5px;
     padding: 5px;
+    border-radius: 0px;
+    border-width: 3px;
+    border-color: #333;
 }
 </style>
