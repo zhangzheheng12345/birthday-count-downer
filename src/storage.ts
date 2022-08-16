@@ -9,19 +9,16 @@ export interface Date {
     month: string,
     day: string
 }
-export function GetSettings(): Date {
-    return JSON.parse(localStorage.getItem("settings") || "") || {
+export function GetDate(): Date {
+    return JSON.parse(localStorage.getItem("date") || "") || {
         month: "", day: ""
     }
 }
-export function SetSettings(key: string, value: string) {
-    let storage = GetSettings() as Date
-    storage[key] = value
-    localStorage.setItem("settings", JSON.stringify(storage))
-    console.log(GetSettings())
+export function SetDate(date: Date) {
+    localStorage.setItem("date", JSON.stringify(date))
 }
 
 export function ClearStorage() {
     localStorage.removeItem("have-visited")
-    localStorage.removeItem("settings")
+    localStorage.removeItem("date")
 }

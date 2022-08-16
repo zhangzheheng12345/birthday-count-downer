@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { GetSettings, SetSettings, SetVisited } from "../storage.js"
+import { GetDate, SetDate, SetVisited } from "../storage.js"
 import { reactive, onMounted } from "vue"
 
 let date = reactive({
@@ -19,13 +19,11 @@ let date = reactive({
 })
 
 onMounted(() => {
-    date = GetSettings()
-    console.log(date.month)
+    date = GetDate()
 })
 
-function SaveSettings() {
-    SetSettings("month", date.month)
-    SetSettings("day", date.day)
+function SaveDate() {
+    SetDate(date)
 }
 
 </script>

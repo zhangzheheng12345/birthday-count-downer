@@ -18,7 +18,7 @@ import { HaveVisited } from './storage.js'
 
 * {
     font-family: 'Effra Trial', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 h1 {
