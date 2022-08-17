@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-	import {dayjs} from 'dayjs'
+	import * as dayjs from 'dayjs'
 	import {computed, reactive} from "vue"
 	import {GetDate} from '../storage.js'
 

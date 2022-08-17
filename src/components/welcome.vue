@@ -1,6 +1,5 @@
 <template>
-    <h1>Welcome to birthday-count-downer</h1>
-    <p>Count down your birthday from now on!</p>
+    <h1>Start counting down your birthday</h1>
     <div>
         <span>Month: </span>
         <input v-model="date.month" />

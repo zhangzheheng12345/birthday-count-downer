@@ -38,11 +38,12 @@ input:focus {
 }
 
 button {
-    maigin: 5px;
+    margin: 5px;
     padding: 5px;
     border-radius: 0px;
     border-width: 3px;
     border-color: #333;
     background-color: #fff;
+    color: #000;
 }
 </style>
