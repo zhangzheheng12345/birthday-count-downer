@@ -11,7 +11,7 @@
 
 	let birthday = GetDate()
 	let now = reactive(dayjs())
-    setTimeOut(function() {
+    setTimeout(function() {
 		birthday = GetDate()
 		now = dayjs()
 	}, 1000 * 1000)

@@ -6,7 +6,7 @@
         <span>Day:</span>
         <input v-model="date.day" />
     </div>
-    <button @click="SetVisited(); SaveSettings()">Done</button>
+    <button @click="SetVisited(); SaveDate()">Done</button>
 </template>
 
 <script setup lang="ts">
