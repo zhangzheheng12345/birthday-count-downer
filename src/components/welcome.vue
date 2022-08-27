@@ -10,14 +10,14 @@
 </template>
 
 <script setup lang="ts">
-import { GetDate, SetDate, SetVisited } from '../storage.js'
+import { GetDate, SetDate, SetVisited } from '../ts/storage'
 import { reactive, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
 let date = reactive({
-  month: '',
-  day: ''
+  month: 0,
+  day: 0
 })
 
 onMounted(() => {

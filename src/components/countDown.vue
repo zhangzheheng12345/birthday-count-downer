@@ -1,26 +1,27 @@
 <template>
   <h1>Your birthday is</h1>
-  <h1>{{ deltaDate.month }} Months {{ deltaDate.day }} Days</h1>
+  <h1>
+    {{ deltaDate }}
+    day{{ deltaDate == 1 ? '' : 's' }}
+  </h1>
   <h1>away</h1>
 </template>
 
 <script setup lang="ts">
-import * as dayjs from 'dayjs'
-import { computed, reactive } from 'vue'
-import { GetDate } from '../storage.js'
+import dayjs from 'dayjs'
+import { reactive, watchEffect } from 'vue'
+import { GetDate } from '../ts/storage'
+import { DateSub } from '../ts/dateCalc'
 
 let birthday = GetDate()
 let now = reactive(dayjs())
 setTimeout(function () {
   birthday = GetDate()
   now = dayjs()
-}, 1000 * 1000)
+}, 1000 * 60)
 
-let deltaDate = computed(() => {
-  return {
-    // TODO: To calculate e.g. 10.1(present) to 7.1(birthday)
-    month: +birthday.month - now.month(),
-    day: +birthday.day - now.day(),
-  }
+let deltaDate: number
+watchEffect(() => {
+  deltaDate = DateSub(birthday, { month: dayjs().month(), day: dayjs().day() })
 })
 </script>

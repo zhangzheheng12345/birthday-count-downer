@@ -1,3 +1,5 @@
+import { Date, BuildDateFromString } from './dateCalc'
+
 export function HaveVisited() {
   return localStorage.getItem('have-visited') != null
 }
@@ -5,15 +7,11 @@ export function SetVisited() {
   localStorage.setItem('have-visited', 'true')
 }
 
-export interface Date {
-  month: string
-  day: string
-}
 export function GetDate(): Date {
-  return (
+  return BuildDateFromString(
     JSON.parse(localStorage.getItem('date') as string) || {
-      month: '',
-      day: '',
+      month: '1',
+      day: '1'
     }
   )
 }
