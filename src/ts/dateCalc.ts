@@ -62,12 +62,11 @@ export function DateSub(date1: Date, date2: Date): number {
     return (
       MonthToDay[date1.month - 1] -
       date1.day +
-      1 +
       Sum(MonthToDay, date1.month, date2.month - 1) +
       date2.day
     )
   } else if (date1.month == date2.month && date1.day <= date2.day) {
-    return date2.day - date1.day + 1
+    return date2.day - date1.day
   } else {
     // MonthToDayThisYear
     const MonthToDayTY = GetMonthToDay(dayjs().year())
@@ -76,7 +75,6 @@ export function DateSub(date1: Date, date2: Date): number {
     return (
       MonthToDayTY[date1.month - 1] -
       date1.day +
-      1 +
       Sum(MonthToDayTY, date1.month, 12) +
       Sum(MonthToDayNY, 0, date2.month - 1) +
       date2.day
@@ -88,11 +86,11 @@ export function DateSub(date1: Date, date2: Date): number {
 export function TestDateCalc() {
   function TestDateSub() {
     const failure = 'TestDateSub failed'
-    if (DateSub({ month: 1, day: 20 }, { month: 1, day: 30 }) != 11) {
+    if (DateSub({ month: 1, day: 20 }, { month: 1, day: 21 }) != 1) {
       console.log(failure)
-    } else if (DateSub({ month: 3, day: 20 }, { month: 5, day: 10 }) != 52) {
+    } else if (DateSub({ month: 3, day: 20 }, { month: 5, day: 10 }) != 51) {
       console.log(failure)
-    } else if (DateSub({ month: 11, day: 20 }, { month: 1, day: 10 }) != 52) {
+    } else if (DateSub({ month: 11, day: 20 }, { month: 1, day: 10 }) != 51) {
       console.log(failure)
     }
   }

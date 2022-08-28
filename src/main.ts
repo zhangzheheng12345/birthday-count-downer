@@ -2,9 +2,11 @@ import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { HaveVisited } from './ts/storage'
 import App from './App.vue'
-import countDown from './components/countDown.vue'
+import countDown from './components/home/countDown.vue'
 import welcome from './components/welcome.vue'
-import { TestDateCalc } from './ts/dateCalc'
+import settings from './components/settings/settings.vue'
+import happyBirthday from './components/home/happyBirthday.vue'
+import { DateEq, TestDateCalc } from './ts/dateCalc'
 
 const routes = [
   {
@@ -15,7 +17,9 @@ const routes = [
     }
   },
   { path: '/home', component: countDown },
-  { path: '/welcome', component: welcome }
+  { path: '/happyBirthday', component: happyBirthday },
+  { path: '/welcome', component: welcome },
+  { path: '/settings', component: settings }
 ]
 
 const router = createRouter({

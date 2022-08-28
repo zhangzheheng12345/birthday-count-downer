@@ -2,13 +2,6 @@
   <RouterView></RouterView>
 </template>
 
-<script setup lang="ts">
-import happyBirthday from './components/happyBirthday.vue'
-import countDown from './components/countDown.vue'
-import settings from './components/settings.vue'
-import welcome from './components/welcome.vue'
-</script>
-
 <!-- Global Styles -->
 <style>
 @import url('https://fonts.cdnfonts.com/css/gogh');
@@ -17,11 +10,14 @@ import welcome from './components/welcome.vue'
 * {
   font-family: 'Effra Trial', sans-serif;
   font-size: 18px;
+  margin: 0px;
+  padding: 0px;
 }
 
 h1 {
   font-family: 'Gogh', sans-serif;
   font-size: 50px;
+  margin: 10px;
 }
 
 input {
@@ -43,5 +39,11 @@ button {
   border-color: #333;
   background-color: #fff;
   color: #000;
+}
+
+.float {
+  position: fixed;
+  right: 10px;
+  top: 10px;
 }
 </style>
