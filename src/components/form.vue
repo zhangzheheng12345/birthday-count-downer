@@ -1,35 +1,46 @@
 <template>
-  <div>
+  <div id="wrapForm">
     <span>Month: </span>
     <input v-model="date.month" />
     <br />
     <span>Day:</span>
     <input v-model="date.day" />
+    <br />
+    <button @click="Done">Done</button>
   </div>
-  <button @click="Done">Done</button>
 </template>
 
 <script setup lang="ts">
 import { GetDate, SetDate, SetVisited } from '../ts/storage'
-import { reactive, onMounted } from 'vue'
+import { ref, onMounted, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 
 const emits = defineEmits(['done'])
 
 const router = useRouter()
-let date = reactive({
+let date = ref({
   month: 0,
   day: 0
 })
 
 onMounted(() => {
-  date = GetDate()
+  date.value = GetDate()
+})
+
+watchEffect(() => {
+  console.log(date)
 })
 
 function Done() {
   SetVisited()
-  SetDate(date)
+  SetDate(date.value)
   router.push('home')
   emits('done')
 }
 </script>
+
+<style scoped>
+#wrapForm {
+  margin: 10px;
+}
+</style>

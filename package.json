@@ -11,9 +11,11 @@
     "vue-router": "^4.1.4"
   },
   "devDependencies": {
+    "@unocss/preset-uno": "^0.45.13",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/compiler-sfc": "^3.2.37",
     "typescript": "^4.7.4",
+    "unocss": "^0.45.13",
     "vite": "^2.9.12",
     "vue-tsc": "^0.40.1"
   }

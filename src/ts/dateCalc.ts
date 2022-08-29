@@ -63,10 +63,11 @@ export function DateSub(date1: Date, date2: Date): number {
       MonthToDay[date1.month - 1] -
       date1.day +
       Sum(MonthToDay, date1.month, date2.month - 1) +
-      date2.day
+      date2.day -
+      1 // Minus one means remove a imcomplete day
     )
   } else if (date1.month == date2.month && date1.day <= date2.day) {
-    return date2.day - date1.day
+    return date2.day - date1.day - 1
   } else {
     // MonthToDayThisYear
     const MonthToDayTY = GetMonthToDay(dayjs().year())
@@ -77,8 +78,22 @@ export function DateSub(date1: Date, date2: Date): number {
       date1.day +
       Sum(MonthToDayTY, date1.month, 12) +
       Sum(MonthToDayNY, 0, date2.month - 1) +
-      date2.day
+      date2.day -
+      1
     )
+  }
+}
+
+export interface Time {
+  hour: number
+  minute: number
+  second: number
+}
+export function RestTime(): Time {
+  return {
+    hour: 24 - dayjs().hour() - 1,
+    minute: 60 - dayjs().minute() - 1,
+    second: 60 - dayjs().second()
   }
 }
 
@@ -86,11 +101,11 @@ export function DateSub(date1: Date, date2: Date): number {
 export function TestDateCalc() {
   function TestDateSub() {
     const failure = 'TestDateSub failed'
-    if (DateSub({ month: 1, day: 20 }, { month: 1, day: 21 }) != 1) {
+    if (DateSub({ month: 1, day: 20 }, { month: 1, day: 21 }) != 0) {
       console.log(failure)
-    } else if (DateSub({ month: 3, day: 20 }, { month: 5, day: 10 }) != 51) {
+    } else if (DateSub({ month: 3, day: 20 }, { month: 5, day: 10 }) != 50) {
       console.log(failure)
-    } else if (DateSub({ month: 11, day: 20 }, { month: 1, day: 10 }) != 51) {
+    } else if (DateSub({ month: 11, day: 20 }, { month: 1, day: 10 }) != 50) {
       console.log(failure)
     }
   }

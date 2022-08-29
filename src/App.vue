@@ -16,8 +16,9 @@
 
 h1 {
   font-family: 'Gogh', sans-serif;
-  font-size: 50px;
+  font-size: 3.6rem;
   margin: 10px;
+  text-align: center;
 }
 
 input {
