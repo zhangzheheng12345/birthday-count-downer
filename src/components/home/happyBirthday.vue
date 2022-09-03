@@ -1,7 +1,7 @@
 <template>
   <to-settings></to-settings>
   <h1
-    class="text-red-600 animate-bounce mt-15 border-5 border-red-600 rounded-3"
+    class="mt-15 border-5"
   >
     Happy Birthday!
   </h1>

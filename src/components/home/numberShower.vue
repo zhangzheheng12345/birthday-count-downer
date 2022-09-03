@@ -2,7 +2,6 @@
   <h1
     class="text-7xl m-4.5 mt-5 tracking-wider rounded-2xl border-5 border-grey-400"
     :class="{
-      'animate-bounce': props.unit == 'second' || toBounce,
       'text-7xl': props.unit == 'day'
     }"
   >
@@ -19,11 +18,4 @@ import { ref, watch } from 'vue'
 const props = defineProps<{ value: number; unit: string }>()
 
 let toBounce = ref(false)
-if (props.unit != 'second')
-  watch(props, () => {
-    toBounce.value = true
-    setTimeout(function () {
-      toBounce.value = false
-    }, 1200)
-  })
 </script>
