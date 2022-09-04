@@ -1,12 +1,14 @@
 <template>
   <div id="wrapForm">
-    <span>Month: </span>
-    <input v-model="date.month" />
-    <br />
-    <span>Day:</span>
-    <input v-model="date.day" />
-    <br />
-    <button @click="Done">Done</button>
+    <div class="bounce-in-right">
+      <span>Month: </span>
+      <input v-model="date.month" />
+    </div>
+    <div class="bounce-in-right">
+      <span>Day:</span>
+      <input v-model="date.day" />
+    </div>
+    <button @click="Done" class="bounce-in-bottom">Done</button>
   </div>
 </template>
 

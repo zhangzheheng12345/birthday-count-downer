@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 import 'uno.css'
+import './animation.css'
 
 import { HaveVisited } from './ts/storage'
 import { TestDateCalc } from './ts/dateCalc'

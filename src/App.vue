@@ -40,11 +40,13 @@ button {
   border-color: #333;
   background-color: #fff;
   color: #000;
+  font-size: 1.2rem;
 }
 
 .float {
   position: fixed;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 13px;
+  z-index: 100;
 }
 </style>

@@ -1,10 +1,27 @@
 <template>
   <to-settings></to-settings>
-  <h1>YOUR BIRTHDAY</h1>
-  <number-shower :value="deltaDate" unit="day"></number-shower>
-  <number-shower :value="restTime.hour" unit="hour"></number-shower>
-  <number-shower :value="restTime.minute" unit="minute"></number-shower>
-  <number-shower :value="restTime.second" unit="second"></number-shower>
+  <h1 class="tracking-in-expand">YOUR</h1>
+  <h1 class="tracking-in-expand">BIRTHDAY</h1>
+  <number-shower
+    :value="deltaDate"
+    unit="day"
+    class="slide-in-blurred-right"
+  ></number-shower>
+  <number-shower
+    :value="restTime.hour"
+    unit="hour"
+    class="slide-in-blurred-left"
+  ></number-shower>
+  <number-shower
+    :value="restTime.minute"
+    unit="minute"
+    class="slide-in-blurred-right"
+  ></number-shower>
+  <number-shower
+    :value="restTime.second"
+    unit="second"
+    class="slide-in-blurred-left"
+  ></number-shower>
   <h1>away</h1>
 </template>
 

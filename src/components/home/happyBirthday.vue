@@ -1,13 +1,14 @@
 <template>
   <to-settings></to-settings>
-  <h1
-    class="mt-15 border-5"
-  >
-    Happy Birthday!
-  </h1>
+  <div class="border-5 m-3 mb-5">
+    <h1 class="m-0 tracking-in-expand">HAPPY</h1>
+    <h1 class="m-0 tracking-in-expand">BIRTHDAY</h1>
+    <h1 class="m-0 text-10 mb-3">🎂🎉🥂🍾</h1>
+  </div>
   <img :src="srcName" />
   <button
-    class="bg-red-500 text-white w-11/12 border-0 rounded-2 m-3"
+    class="w-11/12 m-3"
+    :class="{ 'jello-horizontal': toJello }"
     @click="ChangeCake"
   >
     Change a cake...
@@ -30,6 +31,7 @@ const imgSrcList = [
   'https://images.unsplash.com/photo-1552689486-ce080445fbb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=862&q=80'
 ]
 let srcName = ref('')
+let toJello = ref(false)
 
 onMounted(() => {
   srcName.value = imgSrcList[Math.floor(Math.random() * imgSrcList.length)]
@@ -40,11 +42,18 @@ function ChangeCake() {
   while (tmp == srcName.value) {
     srcName.value = imgSrcList[Math.floor(Math.random() * imgSrcList.length)]
   }
+  toJello.value = true
+  setTimeout(function () {
+    toJello.value = false
+  }, 1000)
 }
 </script>
 
 <style scoped>
 img {
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  min-height: 5rem;
 }
 </style>

@@ -5,7 +5,7 @@ import Unocss from 'unocss/vite'
 import { presetUno } from 'unocss'
 
 export default defineConfig({
-  base: 'birthday-count-downer',
+  base: '/bcd/', // Deploy to zhangzheheng12345/bcd
   plugins: [
     vue(),
     Unocss({
