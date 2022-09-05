@@ -5,7 +5,7 @@ import Unocss from 'unocss/vite'
 import { presetUno } from 'unocss'
 
 export default defineConfig({
-  base: '/bcd/', // Deploy to zhangzheheng12345/bcd
+  base: '', // Deploy to zhangzheheng12345/bcd
   plugins: [
     vue(),
     Unocss({
