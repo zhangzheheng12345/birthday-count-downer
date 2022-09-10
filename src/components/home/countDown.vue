@@ -10,17 +10,17 @@
   <number-shower
     :value="restTime.hour"
     unit="hour"
-    class="slide-in-blurred-left"
+    class="slide-in-blurred-left delay-500"
   ></number-shower>
   <number-shower
     :value="restTime.minute"
     unit="minute"
-    class="slide-in-blurred-right"
+    class="slide-in-blurred-right delay-1000"
   ></number-shower>
   <number-shower
     :value="restTime.second"
     unit="second"
-    class="slide-in-blurred-left"
+    class="slide-in-blurred-left delay-1500"
   ></number-shower>
   <h1>away</h1>
 </template>

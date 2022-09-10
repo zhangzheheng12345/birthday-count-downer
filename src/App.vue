@@ -4,9 +4,6 @@
 
 <!-- Global Styles -->
 <style>
-@import url('https://fonts.cdnfonts.com/css/gogh');
-@import url('https://fonts.cdnfonts.com/css/effra-trial?styles=133480');
-
 * {
   font-family: 'Effra Trial', sans-serif;
   font-size: 18px;
