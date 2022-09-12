@@ -13,7 +13,7 @@
 
 h1 {
   font-family: 'Gogh', sans-serif;
-  font-size: 3.6rem;
+  font-size: 3.3rem;
   margin: 10px;
   text-align: center;
 }
