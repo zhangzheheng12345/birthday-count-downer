@@ -1,6 +1,8 @@
 # birthday-count-downer
 
+![vXu5QO.png](https://s1.ax1x.com/2022/09/12/vXu5QO.png)
+
 A simple birthday-count-downer.
-Website at [bcd](https://zhangzheheng12345.github.io/bcd).
+Website at [birthday-count-downer](birthday-count-downer.netlify.app).
 
 Build with Vue & UnoCSS. Animation provided by [Animista.net](https://animista.net).
