@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { GetDate, SetDate, SetVisited } from '../ts/storage'
+import { GetDate, SetDate, SetVisited } from '@/ts/storage'
 import { ref, onMounted, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 
