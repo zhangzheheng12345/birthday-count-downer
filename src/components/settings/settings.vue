@@ -8,5 +8,5 @@
 </template>
 
 <script setup lang="ts">
-import formVue from '@/form.vue'
+import formVue from '@/components/form.vue'
 </script>
