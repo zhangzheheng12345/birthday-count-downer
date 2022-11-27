@@ -2,11 +2,11 @@
   <div id="wrapForm" class="m-10px">
     <div class="bounce-in-right">
       <span>Month: </span>
-      <input v-model="date.month" enterkeyhint="next" inputmode="tel" />
+      <input v-model="date.month" inputmode="tel" />
     </div>
     <div class="bounce-in-right">
       <span>Day:</span>
-      <input v-model="date.day" enterkeyhint="done" inputmode="tel" />
+      <input v-model="date.day" inputmode="tel" />
     </div>
     <button @click="Done" class="bounce-in-bottom">Done</button>
   </div>
