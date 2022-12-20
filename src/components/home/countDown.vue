@@ -35,8 +35,8 @@ import { ref, watchEffect } from 'vue'
 import toSettings from './toSettings.vue'
 import numberShower from './numberShower.vue'
 
-import { GetDate } from '../../ts/storage'
-import { DateEq, DateSub, RestTime, Time } from '../../ts/dateCalc'
+import { GetDate } from '@/ts/storage'
+import { DateEq, DateSub, RestTime, Time } from '@/ts/dateCalc'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
