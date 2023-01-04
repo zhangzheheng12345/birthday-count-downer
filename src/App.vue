@@ -7,15 +7,9 @@
 * {
   font-family: 'Lobster', sans-serif;
   font-size: 23px;
+  color: #000;
   margin: 0px;
   padding: 0px;
-}
-
-@media (prefers-color-scheme:dark) {
-  * {
-    color: #000;
-    background-color: #fff;
-  }
 }
 
 h1 {
@@ -29,7 +23,7 @@ input {
   padding: 5px;
   border-radius: 0px;
   border-width: 3px;
-  border-color: #333;
+  border-color: #000;
 }
 input:focus {
   outline: 0px;
@@ -41,15 +35,22 @@ button {
   border-radius: 0px;
   border-width: 3px;
   border-color: #333;
-  background-color: #fff;
-  color: #000;
   font-size: 1.2rem;
 }
 
-.float {
-  position: fixed;
-  right: 20px;
-  top: 13px;
-  z-index: 100;
+@media (prefers-color-scheme: dark) {
+  * {
+    color: #fff;
+    background-color: #222;
+  }
+  button {
+    border-color: #fff;
+  }
+  input {
+    border-color: #fff;
+  }
+  h1 {
+    border-color: #fff;
+  }
 }
 </style>

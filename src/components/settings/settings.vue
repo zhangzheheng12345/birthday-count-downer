@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-end m-3">
     <router-link
-      class="color-black i-carbon-home text-inherit"
+      class="i-carbon-home text-inherit"
       to="/home"
     ></router-link>
   </div>

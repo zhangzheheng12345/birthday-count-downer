@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1
-      class="text-5xl m-4 tracking-wider rounded-2xl border-5 border-gray-900 dark:border-white"
+      class="text-5xl m-4 tracking-wider rounded-2xl border-5"
       :class="{
         'text-6xl': props.unit == 'day'
       }"
