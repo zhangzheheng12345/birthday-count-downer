@@ -6,9 +6,16 @@
 <style>
 * {
   font-family: 'Lobster', sans-serif;
-  font-size: 20px;
+  font-size: 23px;
   margin: 0px;
   padding: 0px;
+}
+
+@media (prefers-color-scheme:dark) {
+  * {
+    color: #000;
+    background-color: #fff;
+  }
 }
 
 h1 {
