@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 import Unocss from 'unocss/vite'
-import { presetUno } from 'unocss'
+import { presetIcons, presetUno } from 'unocss'
 
 const path = require('path')
 
@@ -11,7 +11,13 @@ export default defineConfig({
   plugins: [
     vue(),
     Unocss({
-      presets: [presetUno()]
+      presets: [
+        presetUno(),
+        presetIcons({
+          scale: 1.5,
+          cdn: 'https://esm.sh'
+        })
+      ]
     })
   ],
   server: {

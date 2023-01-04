@@ -5,15 +5,15 @@
 <!-- Global Styles -->
 <style>
 * {
-  font-family: 'Effra Trial', sans-serif;
-  font-size: 18px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
   margin: 0px;
   padding: 0px;
 }
 
 h1 {
-  font-family: 'Gogh', sans-serif;
-  font-size: 3.3rem;
+  font-family: 'Lobster', sans-serif;
+  font-size: 4rem;
   margin: 10px;
   text-align: center;
 }

@@ -1,8 +1,10 @@
 <template>
-  <div class="h-6"></div>
-  <router-link class="float bg-white rounded-5 p-1 shadow-md" to="/home">
-    <img src="./svgs/home.svg" class="scale-110" />
-  </router-link>
+  <div class="flex justify-end m-3">
+    <router-link
+      class="color-black i-carbon-home text-inherit"
+      to="/home"
+    ></router-link>
+  </div>
   <h1 class="mb-5 tracking-in-expand">Settings</h1>
   <form-vue></form-vue>
 </template>
