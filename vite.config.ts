@@ -7,14 +7,14 @@ import { presetIcons, presetUno } from 'unocss'
 const path = require('path')
 
 export default defineConfig({
-  base: '', // Deploy to zhangzheheng12345/bcd
+  base: '',
   plugins: [
     vue(),
     Unocss({
       presets: [
         presetUno(),
         presetIcons({
-          scale: 1.5,
+          scale: 1.7,
           cdn: 'https://esm.sh'
         })
       ]

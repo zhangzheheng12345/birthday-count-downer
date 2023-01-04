@@ -5,14 +5,13 @@
 <!-- Global Styles -->
 <style>
 * {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Lobster', sans-serif;
   font-size: 20px;
   margin: 0px;
   padding: 0px;
 }
 
 h1 {
-  font-family: 'Lobster', sans-serif;
   font-size: 4rem;
   margin: 10px;
   text-align: center;
