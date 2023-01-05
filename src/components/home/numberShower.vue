@@ -1,14 +1,14 @@
 <template>
   <div>
     <h1
-      class="text-5xl m-4 tracking-wider rounded-2xl border-5"
+      class="text-55px m-4 tracking-wider border-5"
       :class="{
-        'text-6xl': props.unit == 'day'
+        'text-60px': props.unit == 'day'
       }"
     >
       {{ props.value }}
     </h1>
-    <h1 class="text-3xl" :class="{ 'text-4xl': props.unit == 'day' }">
+    <h1 class="text-55px" :class="{ 'text-60px': props.unit == 'day' }">
       {{ props.unit + (props.value == 1 ? '' : 's') }}
     </h1>
   </div>

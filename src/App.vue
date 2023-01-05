@@ -13,8 +13,8 @@
 }
 
 h1 {
-  font-size: 4rem;
-  margin: 10px;
+  font-size: 70px;
+  margin: 8px;
   text-align: center;
 }
 
