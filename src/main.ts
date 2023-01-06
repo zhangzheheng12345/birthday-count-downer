@@ -5,7 +5,6 @@ import 'uno.css'
 import './animation.css'
 
 import { HaveVisited } from './ts/storage'
-import { TestDateCalc } from './ts/dateCalc'
 
 import App from './App.vue'
 import countDown from './components/home/countDown.vue'
@@ -35,6 +34,3 @@ const router = createRouter({
 const app = createApp(App)
 app.use(router)
 app.mount('#app')
-
-// Tests
-TestDateCalc()
