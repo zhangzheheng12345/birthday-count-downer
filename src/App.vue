@@ -13,8 +13,7 @@
 }
 
 h1 {
-  font-size: 70px;
-  margin: 8px;
+  font-size: 57px;
   text-align: center;
 }
 
@@ -36,6 +35,7 @@ button {
   border-width: 3px;
   border-color: #333;
   font-size: 1.2rem;
+  background-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -6,22 +6,22 @@
     <number-shower
       :value="deltaDate"
       unit="day"
-      class="slide-in-blurred-right min-w-20rem"
+      class="slide-in-blurred-right w-90% max-w-450px"
     ></number-shower>
     <number-shower
       :value="restTime.hour"
       unit="hour"
-      class="slide-in-blurred-left min-w-20rem"
+      class="slide-in-blurred-left w-90% max-w-450px"
     ></number-shower>
     <number-shower
       :value="restTime.minute"
       unit="minute"
-      class="slide-in-blurred-right min-w-20rem"
+      class="slide-in-blurred-right w-90% max-w-450px"
     ></number-shower>
     <number-shower
       :value="restTime.second"
       unit="second"
-      class="slide-in-blurred-left min-w-20rem"
+      class="slide-in-blurred-left w-90% max-w-450px"
     ></number-shower>
   </div>
 

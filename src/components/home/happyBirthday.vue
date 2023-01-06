@@ -1,18 +1,27 @@
 <template>
   <to-settings></to-settings>
-  <div class="border-5 m-3 mb-5">
-    <h1 class="m-0 tracking-in-expand">HAPPY</h1>
-    <h1 class="m-0 tracking-in-expand">BIRTHDAY</h1>
-    <h1 class="m-0 text-10 mb-3">🎂🎉🥂🍾</h1>
+
+  <div class="flex justify-center flex-wrap">
+    <div class="w-95% max-w-450px border-5 m-3 mb-5">
+      <h1 class="m-0 tracking-in-expand">HAPPY</h1>
+      <h1 class="m-0 tracking-in-expand">BIRTHDAY</h1>
+      <h1 class="m-0 text-10 mb-2">🎂🎉🥂🍾</h1>
+    </div>
+    <div class="w-100%">
+      <div class="flex justify-center">
+        <img :src="srcName" class="max-w-400px object-contain" />
+      </div>
+    </div>
+    <div class="w-100% flex justify-center">
+      <button
+        class="w-90% max-w-450px m-2"
+        :class="{ 'jello-horizontal': toJello }"
+        @click="ChangeCake"
+      >
+        Change a cake...
+      </button>
+    </div>
   </div>
-  <img :src="srcName" />
-  <button
-    class="w-11/12 m-3"
-    :class="{ 'jello-horizontal': toJello }"
-    @click="ChangeCake"
-  >
-    Change a cake...
-  </button>
 </template>
 
 <script setup lang="ts">
