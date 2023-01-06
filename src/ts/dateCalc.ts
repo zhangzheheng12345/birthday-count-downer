@@ -96,18 +96,3 @@ export function RestTime(): Time {
     second: 60 - dayjs().second()
   }
 }
-
-// Test
-export function TestDateCalc() {
-  function TestDateSub() {
-    const failure = 'TestDateSub failed'
-    if (DateSub({ month: 1, day: 20 }, { month: 1, day: 21 }) != 0) {
-      console.log(failure)
-    } else if (DateSub({ month: 3, day: 20 }, { month: 5, day: 10 }) != 50) {
-      console.log(failure)
-    } else if (DateSub({ month: 11, day: 20 }, { month: 1, day: 10 }) != 50) {
-      console.log(failure)
-    }
-  }
-  TestDateSub()
-}
