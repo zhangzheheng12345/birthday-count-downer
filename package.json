@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@iconify/json": "^2.2.2",
+    "@vueuse/core": "^9.11.1",
     "dayjs": "^1.11.5",
     "vue": "^3.2.36",
     "vue-router": "^4.1.4"
