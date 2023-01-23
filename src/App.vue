@@ -1,5 +1,7 @@
 <template>
-  <RouterView></RouterView>
+  <div class="text-black dark:text-white bg-white dark:bg-zinc-900">
+    <RouterView></RouterView>
+  </div>
 </template>
 
 <!-- Global Styles -->
@@ -7,7 +9,8 @@
 * {
   font-family: 'Lobster', sans-serif;
   font-size: 23px;
-  color: #000;
+  color: transparent;
+  background-color: transparent;
   margin: 0px;
   padding: 0px;
 }
@@ -22,7 +25,6 @@ input {
   padding: 5px;
   border-radius: 0px;
   border-width: 3px;
-  border-color: #000;
 }
 input:focus {
   outline: 0px;
@@ -35,22 +37,5 @@ button {
   border-width: 3px;
   border-color: #333;
   font-size: 1.2rem;
-  background-color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-  * {
-    color: #fff;
-    background-color: #222;
-  }
-  button {
-    border-color: #fff;
-  }
-  input {
-    border-color: #fff;
-  }
-  h1 {
-    border-color: #fff;
-  }
 }
 </style>

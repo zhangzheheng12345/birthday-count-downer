@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1
-      class="text-43px m-10px tracking-wider border-5"
+      class="text-43px border-black dark:border-white m-10px tracking-wider border-5"
       :class="{
         'text-47px': props.unit == 'day'
       }"
