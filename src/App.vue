@@ -35,7 +35,6 @@ button {
   padding: 5px;
   border-radius: 0px;
   border-width: 3px;
-  border-color: #333;
   font-size: 1.2rem;
 }
 </style>

@@ -14,7 +14,7 @@
     </div>
     <div class="w-100% flex justify-center">
       <button
-        class="w-90% max-w-450px m-2"
+        class="w-90% max-w-450px m-2 border-black dark:border-white"
         :class="{ 'jello-horizontal': toJello }"
         @click="ChangeCake"
       >
