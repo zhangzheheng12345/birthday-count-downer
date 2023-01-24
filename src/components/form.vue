@@ -2,7 +2,7 @@
   <div id="wrapForm" class="m-10px">
     <div class="bounce-in-right">
       <span>Month: </span>
-      <input v-model="date.month" inputmode="tel" class="border-black dark:border-white/>
+      <input v-model="date.month" inputmode="tel" class="border-black dark:border-white"/>
     </div>
     <div class="bounce-in-right">
       <span>Day:</span>

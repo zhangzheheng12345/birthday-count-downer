@@ -9,7 +9,7 @@
 * {
   font-family: 'Lobster', sans-serif;
   font-size: 23px;
-  color: transparent;
+  color: inherit;
   background-color: transparent;
   margin: 0px;
   padding: 0px;
